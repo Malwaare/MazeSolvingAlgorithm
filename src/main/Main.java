@@ -10,12 +10,13 @@ public class Main {
 
 		//Input File path
         Scanner sc = new Scanner(System.in);  
-        System.out.print("Enter path to the maze: ");
+        System.out.print("Enter filename of maze: ");
 		String filePath = sc.nextLine();
         sc.close();
+        String filename = filePath + ".txt";
         
       try{
-		Maze maze = loadMaze(filePath);
+		Maze maze = loadMaze(filename);
 		maze.findShortestPath();
       }
       catch(FileNotFoundException e)
